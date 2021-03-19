@@ -5,10 +5,12 @@ export const initialState = {
     name:"",
     position:"",
     nickname:"",
-    description:""
+    description:"",
+    id: Date.now()
     }],
     isLoading: false,
     error: '',
+    
 }
 
 const reducer = (state = initialState, action) => {
@@ -37,7 +39,7 @@ const reducer = (state = initialState, action) => {
         case FETCH_SMURFS_SUCCESS:
             return {
                 ...state,
-                smurfs: action.payload,
+                smurfs:  action.payload,
                 isLoading: false,
                 error: '',
             }
