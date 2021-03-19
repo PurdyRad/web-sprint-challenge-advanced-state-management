@@ -32,7 +32,7 @@ const mapStateToProps = (state) => {
         smurfs: state.smurfs
     }
 }
-
+  
 export default connect(mapStateToProps, {})(SmurfList);
 
 //Task List:
